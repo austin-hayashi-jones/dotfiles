@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/austinjones/.oh-my-zsh"
 
@@ -12,9 +9,6 @@ ZSH_THEME="robbyrussell"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 plugins=(
   git
   vi-mode
@@ -23,14 +17,20 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-# export MANPATH="/usr/local/man:$MANPATH"
+# clone antidote if necessary
+if ! [[ -e ${ZDOTDIR:-~}/.antidote ]]; then
+  git clone https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
+fi
+
+# antidote (plugin manager)
+# https://github.com/mattmc3/antidote#installation
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+antidote load
 
 # For a full list of active aliases, run `alias`.
-alias vidami_chrome="cd ~/Desktop/UD/vidami-chrome-extension"
-alias desktop="cd ~/Desktop"
 alias ls="colorls --group-directories-first --almost-all"
 alias ll="colorls --group-directories-first --almost-all --long"
-
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
+alias gs="git status"
+alias gl="git pull"
+alias gp="git push"
+alias go="git log"

@@ -27,10 +27,14 @@ fi
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
 
+source /opt/homebrew/etc/profile
+
 # For a full list of active aliases, run `alias`.
 alias ls="colorls --group-directories-first --almost-all"
 alias ll="colorls --group-directories-first --almost-all --long"
 alias gs="git status"
 alias gl="git pull"
 alias gp="git push"
-alias go="git log"
+alias gpr="gh pr create --fill"
+alias glg="git log"
+alias naas="cd ~/alchemy/repo/naas"

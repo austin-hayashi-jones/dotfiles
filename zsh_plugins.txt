@@ -1,3 +1,2 @@
-zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions
-athityakumar/colorls
+zsh-users/zsh-syntax-highlighting

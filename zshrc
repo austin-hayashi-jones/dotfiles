@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/austinjones/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -33,4 +33,5 @@ alias ll="colorls --group-directories-first --almost-all --long"
 alias gs="git status"
 alias gl="git pull"
 alias gp="git push"
-alias go="git log"
+alias gpr="gh pr create --fill"
+alias glg="git log"

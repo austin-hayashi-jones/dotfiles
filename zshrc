@@ -27,8 +27,6 @@ fi
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
 
-source /opt/homebrew/etc/profile
-
 # For a full list of active aliases, run `alias`.
 alias ls="colorls --group-directories-first --almost-all"
 alias ll="colorls --group-directories-first --almost-all --long"

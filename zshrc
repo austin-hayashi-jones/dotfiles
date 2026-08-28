@@ -35,3 +35,10 @@ alias gl="git pull"
 alias gp="git push"
 alias gpr="gh pr create --fill"
 alias glg="git log"
+
+# fnm (Node version manager)
+eval "$(fnm env --use-on-cd --shell zsh)"
+source ~/.iterm2_shell_integration.zsh
+
+export EDITOR="vim"
+export VISUAL="vim"
